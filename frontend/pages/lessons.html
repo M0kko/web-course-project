@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Журнал посещаемости — Занятия</title>
+</head>
+<body>
+    <a href="#main" class="skip-link">Перейти к основному содержимому</a>
+
+    <header>
+        <h1>Занятия</h1>
+        <nav aria-label="Основная навигация">
+            <ul>
+                <li><a href="/index.html">Главная</a></li>
+                <li><a href="/pages/groups.html">Группы</a></li>
+                <li><a href="/pages/students.html">Студенты</a></li>
+                <li><a href="/pages/lessons.html" aria-current="page">Занятия</a></li>
+                <li><a href="/pages/attendance-grid.html">Журнал</a></li>
+                <li><a href="/pages/login.html">Вход</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section aria-labelledby="lessons-list-title">
+            <h2 id="lessons-list-title">Расписание и темы занятий</h2>
+            <p><a href="/pages/lesson-form.html">+ Создать новое занятие</a></p>
+            <table>
+                <caption>Список проведенных и запланированных занятий</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Дата</th>
+                        <th scope="col">Тема занятия</th>
+                        <th scope="col">Группа</th>
+                        <th scope="col">Тип</th>
+                        <th scope="col">Действия</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>2024-02-15</td>
+                        <td>Основы алгоритмизации</td>
+                        <td>ИС-21</td>
+                        <td>Лекция</td>
+                        <td><a href="/pages/attendance-grid.html?lesson=1">Проставить посещаемость</a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>2024-02-22</td>
+                        <td>Структуры данных</td>
+                        <td>ИС-21</td>
+                        <td>Практика</td>
+                        <td><a href="/pages/attendance-grid.html?lesson=2">Проставить посещаемость</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p><a href="/index.html">На главную</a></p>
+    </footer>
+</body>
+</html>

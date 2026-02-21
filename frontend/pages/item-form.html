@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Сквозной проект – Форма объекта</title>
+</head>
+
+<body>
+  <a href="#main" class="skip-link">Перейти к основному содержимому</a>
+
+  <header>
+    <h1>Создание / редактирование объекта</h1>
+
+    <nav aria-label="Основная навигация">
+      <ul>
+        <li><a href="/index.html">Главная</a></li>
+        <li><a href="/pages/items.html">Список объектов</a></li>
+        <li><a href="/pages/item-form.html" aria-current="page">Создать объект</a></li>
+        <li><a href="/pages/login.html">Вход</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section aria-labelledby="form-title">
+      <h2 id="form-title">Параметры объекта</h2>
+
+      <p>
+        На этапе ЛР2 форма является структурной заготовкой. Отправка данных на сервер будет реализована
+        после создания backend/API. Однако уже сейчас необходимо обеспечить корректную семантику и связки label ↔ input.
+      </p>
+
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Основные поля</legend>
+
+          <div>
+            <label for="title">Название</label>
+            <input id="title" name="title" type="text" maxlength="120" required />
+          </div>
+
+          <div>
+            <label for="description">Описание</label>
+            <textarea id="description" name="description" rows="5" maxlength="2000"></textarea>
+          </div>
+
+          <div>
+            <label for="category">Категория</label>
+            <input id="category" name="category" type="text" maxlength="80" />
+          </div>
+
+          <div>
+            <label for="status">Статус</label>
+            <select id="status" name="status" required>
+              <option value="">Выберите статус</option>
+              <option value="new">Новый</option>
+              <option value="active">Активный</option>
+              <option value="closed">Закрыт</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="date">Дата</label>
+            <input id="date" name="date" type="date" />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Действия</legend>
+          <button type="submit">Сохранить</button>
+          <button type="reset">Очистить форму</button>
+          <a href="/pages/items.html">Отмена</a>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p><a href="/pages/items.html">К списку</a></p>
+  </footer>
+</body>
+</html>

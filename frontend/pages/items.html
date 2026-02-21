@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Сквозной проект – Список объектов</title>
+</head>
+
+<body>
+  <a href="#main" class="skip-link">Перейти к основному содержимому</a>
+
+  <header>
+    <h1>Список объектов</h1>
+
+    <nav aria-label="Основная навигация">
+      <ul>
+        <li><a href="/index.html">Главная</a></li>
+        <li><a href="/pages/items.html" aria-current="page">Список объектов</a></li>
+        <li><a href="/pages/item-form.html">Создать объект</a></li>
+        <li><a href="/pages/login.html">Вход</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section aria-labelledby="filters-title">
+      <h2 id="filters-title">Фильтры и поиск</h2>
+
+      <form action="#" method="get">
+        <fieldset>
+          <legend>Параметры отбора</legend>
+
+          <div>
+            <label for="q">Поиск по названию</label>
+            <input id="q" name="q" type="search" placeholder="Введите фрагмент названия" />
+          </div>
+
+          <div>
+            <label for="status">Статус</label>
+            <select id="status" name="status">
+              <option value="">Любой</option>
+              <option value="new">Новый</option>
+              <option value="active">Активный</option>
+              <option value="closed">Закрыт</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="from">Период с</label>
+            <input id="from" name="from" type="date" />
+          </div>
+
+          <div>
+            <label for="to">Период по</label>
+            <input id="to" name="to" type="date" />
+          </div>
+
+          <div>
+            <button type="submit">Применить</button>
+            <button type="reset">Сбросить</button>
+          </div>
+        </fieldset>
+      </form>
+
+      <p>
+        Примечание: в ЛР2 фильтры носят демонстрационный характер. В ЛР4–ЛР5
+        они будут связаны с отрисовкой данных, а далее – с запросами к API.
+      </p>
+    </section>
+
+    <section aria-labelledby="list-title">
+      <h2 id="list-title">Перечень</h2>
+
+      <p>
+        Таблица предназначена для отображения основной сущности проекта. На данном этапе
+        показаны примерные строки. Структура столбцов должна соответствовать выбранной теме проекта.
+      </p>
+
+      <p>
+        <a href="/pages/item-form.html">Создать новый объект</a>
+      </p>
+
+      <table>
+        <caption>Список объектов (пример данных)</caption>
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Название</th>
+            <th scope="col">Категория</th>
+            <th scope="col">Статус</th>
+            <th scope="col">Дата</th>
+            <th scope="col">Действия</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Пример объекта №1</td>
+            <td>–</td>
+            <td>Новый</td>
+            <td>–</td>
+            <td><a href="/pages/item-view.html">Подробнее</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Пример объекта №2</td>
+            <td>–</td>
+            <td>Активный</td>
+            <td>–</td>
+            <td><a href="/pages/item-view.html">Подробнее</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <nav aria-label="Постраничная навигация">
+        <ul>
+          <li><a href="#" aria-disabled="true">Назад</a></li>
+          <li><a href="#" aria-current="page">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">Вперёд</a></li>
+        </ul>
+      </nav>
+    </section>
+  </main>
+
+  <footer>
+    <p><a href="/index.html">На главную</a></p>
+  </footer>
+</body>
+</html>

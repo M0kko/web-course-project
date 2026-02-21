@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Журнал посещаемости — Создание занятия</title>
+</head>
+<body>
+    <a href="#main" class="skip-link">Перейти к основному содержимому</a>
+
+    <header>
+        <h1>Создание / редактирование занятия</h1>
+        <nav aria-label="Основная навигация">
+            <ul>
+                <li><a href="/index.html">Главная</a></li>
+                <li><a href="/pages/groups.html">Группы</a></li>
+                <li><a href="/pages/students.html">Студенты</a></li>
+                <li><a href="/pages/lessons.html">Занятия</a></li>
+                <li><a href="/pages/attendance-grid.html">Журнал</a></li>
+                <li><a href="/pages/login.html">Вход</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section aria-labelledby="form-title">
+            <h2 id="form-title">Параметры занятия</h2>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Основные поля</legend>
+                    <div>
+                        <label for="date">Дата проведения</label>
+                        <input id="date" name="date" type="date" required />
+                    </div>
+                    <div>
+                        <label for="topic">Тема занятия</label>
+                        <input id="topic" name="topic" type="text" maxlength="200" required />
+                    </div>
+                    <div>
+                        <label for="group">Группа</label>
+                        <select id="group" name="group" required>
+                            <option value="">Выберите группу</option>
+                            <option value="1">ИС-21</option>
+                            <option value="2">БО-31</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="type">Тип занятия</label>
+                        <select id="type" name="type">
+                            <option value="lecture">Лекция</option>
+                            <option value="practice">Практика</option>
+                            <option value="lab">Лабораторная</option>
+                        </select>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Действия</legend>
+                    <button type="submit">Сохранить занятие</button>
+                    <button type="reset">Очистить</button>
+                    <a href="/pages/lessons.html">Отмена</a>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p><a href="/pages/lessons.html">К списку занятий</a></p>
+    </footer>
+</body>
+</html>

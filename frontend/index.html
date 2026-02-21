@@ -1,12 +1,85 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Сквозной проект – старт</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Журнал посещаемости — Главная</title>
 </head>
 <body>
-  <h1>Проект</h1>
-  <p>Окружение Docker Compose запущено корректно.</p>
+    <a href="#main" class="skip-link">Перейти к основному содержимому</a>
+
+    <header>
+        <h1>Сводка по журналу посещаемости</h1>
+        <nav aria-label="Основная навигация">
+            <ul>
+                <li><a href="/index.html" aria-current="page">Главная</a></li>
+                <li><a href="/pages/groups.html">Группы</a></li>
+                <li><a href="/pages/students.html">Студенты</a></li>
+                <li><a href="/pages/lessons.html">Занятия</a></li>
+                <li><a href="/pages/attendance-grid.html">Журнал</a></li>
+                <li><a href="/pages/login.html">Вход</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <!-- Блок ключевых показателей -->
+        <section aria-labelledby="summary-title">
+            <h2 id="summary-title">Ключевые показатели</h2>
+            <p>Здесь будут отображаться метрики, загруженные из базы данных (API).</p>
+            <div class="summary-cards">
+                <article>
+                    <h3>Всего групп</h3>
+                    <p><strong>--</strong></p>
+                </article>
+                <article>
+                    <h3>Всего студентов</h3>
+                    <p><strong>--</strong></p>
+                </article>
+                <article>
+                    <h3>Проведено занятий</h3>
+                    <p><strong>--</strong></p>
+                </article>
+                <article>
+                    <h3>Сред. активность</h3>
+                    <p><strong>--</strong></p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Блок последних занятий -->
+        <section aria-labelledby="recent-title">
+            <h2 id="recent-title">Последние занятия</h2>
+            <table>
+                <caption>Список последних пяти проведенных занятий</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Дата</th>
+                        <th scope="col">Тема занятия</th>
+                        <th scope="col">Группа</th>
+                        <th scope="col">Присутствовало</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>Дисциплина: «Разработка интернет-приложений» | Тема: Журнал посещаемости</p>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Журнал посещаемости — Отчет по студенту</title>
+</head>
+<body>
+    <a href="#main" class="skip-link">Перейти к основному содержимому</a>
+
+    <header>
+        <h1>Отчет по студенту: Иванов И.И.</h1>
+        <nav aria-label="Основная навигация">
+            <ul>
+                <li><a href="/index.html">Главная</a></li>
+                <li><a href="/pages/groups.html">Группы</a></li>
+                <li><a href="/pages/students.html">Студенты</a></li>
+                <li><a href="/pages/lessons.html">Занятия</a></li>
+                <li><a href="/pages/attendance-grid.html">Журнал</a></li>
+                <li><a href="/pages/login.html">Вход</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <!-- Блок статистики -->
+        <section aria-labelledby="stats-title">
+            <h2 id="stats-title">Сводка (пример данных)</h2>
+            <dl>
+                <dt>Группа</dt>
+                <dd>ИС-21</dd>
+                <dt>Всего занятий</dt>
+                <dd>--</dd>
+                <dt>Пропущено (всего)</dt>
+                <dd>--</dd>
+                <dt>Средняя активность</dt>
+                <dd>--</dd>
+            </dl>
+        </section>
+
+        <!-- Детальная таблица -->
+        <section aria-labelledby="details-title">
+            <h2 id="details-title">Посещаемость по неделям</h2>
+            <table>
+                <caption>Детализация успеваемости студента</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Дата</th>
+                        <th scope="col">Тема</th>
+                        <th scope="col">Статус</th>
+                        <th scope="col">Активность</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024-02-15</td>
+                        <td>Основы алгоритмизации</td>
+                        <td>Присутствовал</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>2024-02-22</td>
+                        <td>Структуры данных</td>
+                        <td>Отсутствовал</td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><a href="#">Экспорт отчета (PDF/Excel) - заглушка</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p><a href="/pages/students.html">К списку студентов</a></p>
+    </footer>
+</body>
+</html>

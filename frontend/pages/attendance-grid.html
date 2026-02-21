@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Журнал посещаемости — Сетка</title>
+</head>
+<body>
+    <a href="#main" class="skip-link">Перейти к основному содержимому</a>
+
+    <header>
+        <h1>Журнал посещаемости и активности</h1>
+        <nav aria-label="Основная навигация">
+            <ul>
+                <li><a href="/index.html">Главная</a></li>
+                <li><a href="/pages/groups.html">Группы</a></li>
+                <li><a href="/pages/students.html">Студенты</a></li>
+                <li><a href="/pages/lessons.html">Занятия</a></li>
+                <li><a href="/pages/attendance-grid.html" aria-current="page">Журнал</a></li>
+                <li><a href="/pages/login.html">Вход</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <!-- Выбор контекста: группа и дата -->
+        <section aria-labelledby="context-title">
+            <h2 id="context-title">Контекст просмотра</h2>
+            <form action="#" method="get">
+                <div>
+                    <label for="group-select">Группа:</label>
+                    <select id="group-select" name="group">
+                        <option value="1">ИС-21</option>
+                        <option value="2">БО-31</option>
+                    </select>
+                    
+                    <label for="lesson-select">Занятие:</label>
+                    <select id="lesson-select" name="lesson">
+                        <option value="1">15.02.2024 - Основы алгоритмизации</option>
+                        <option value="2">22.02.2024 - Структуры данных</option>
+                    </select>
+                    
+                    <button type="submit">Загрузить</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Таблица отметок -->
+        <section aria-labelledby="grid-title">
+            <h2 id="grid-title">Отметки посещаемости и активности</h2>
+            <form action="#" method="post">
+                <table>
+                    <caption>Проставьте статус и оценку для каждого студента</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">№</th>
+                            <th scope="col">Студент</th>
+                            <th scope="col">Статус посещения</th>
+                            <th scope="col">Оценка активности (0-5)</th>
+                            <th scope="col">Комментарий</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Иванов И.И.</td>
+                            <td>
+                                <select name="status[101]">
+                                    <option value="present">Присутствовал</option>
+                                    <option value="absent">Отсутствовал</option>
+                                    <option value="excused">Уваж. причина</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="number" name="grade[101]" min="0" max="5" step="1" value="0" />
+                            </td>
+                            <td>
+                                <input type="text" name="comment[101]" placeholder="..." maxlength="100" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Петров П.П.</td>
+                            <td>
+                                <select name="status[102]">
+                                    <option value="present">Присутствовал</option>
+                                    <option value="absent">Отсутствовал</option>
+                                    <option value="excused">Уваж. причина</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="number" name="grade[102]" min="0" max="5" step="1" value="0" />
+                            </td>
+                            <td>
+                                <input type="text" name="comment[102]" placeholder="..." maxlength="100" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div>
+                    <button type="submit">Сохранить отметки</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p><a href="/index.html">На главную</a></p>
+    </footer>
+</body>
+</html>
