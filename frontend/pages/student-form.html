@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Журнал посещаемости — Добавление студента</title>
+    <link rel="stylesheet" href="/styles/main.css" />
+</head>
+<body>
+    <a href="#main" class="skip-link">Перейти к основному содержимому</a>
+
+    <header>
+        <h1>Добавление нового студента</h1>
+        <nav aria-label="Основная навигация">
+            <ul>
+                <li><a href="/index.html">Главная</a></li>
+                <li><a href="/pages/groups.html">Группы</a></li>
+                <li><a href="/pages/students.html">Студенты</a></li>
+                <li><a href="/pages/lessons.html">Занятия</a></li>
+                <li><a href="/pages/attendance-grid.html">Журнал</a></li>
+                <li><a href="/pages/login.html">Вход</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section aria-labelledby="form-title">
+            <h2 id="form-title">Заполните данные студента</h2>
+            <div id="form-message" aria-live="polite"></div>
+            <form id="student-form" action="#" method="post" novalidate>
+                <fieldset>
+                    <legend>Основная информация</legend>
+
+                    <div>
+                        <label for="fullName">ФИО *</label>
+                        <input id="fullName" name="fullName" type="text" maxlength="150" required />
+                        <small class="field-error" id="fullName-error"></small>
+                    </div>
+
+                    <div>
+                        <label for="groupName">Группа *</label>
+                        <input id="groupName" name="groupName" type="text" maxlength="20" required />
+                        <small class="field-error" id="groupName-error"></small>
+                    </div>
+
+                    <div>
+                        <label for="course">Курс *</label>
+                        <input id="course" name="course" type="number" min="1" max="6" required />
+                        <small class="field-error" id="course-error"></small>
+                    </div>
+
+                    <div>
+                        <label for="recordBook">Номер зачётки</label>
+                        <input id="recordBook" name="recordBook" type="text" maxlength="20" />
+                        <small class="field-error" id="recordBook-error"></small>
+                    </div>
+
+                    <div>
+                        <label for="enrolledAt">Дата зачисления *</label>
+                        <input id="enrolledAt" name="enrolledAt" type="date" required />
+                        <small class="field-error" id="enrolledAt-error"></small>
+                    </div>
+
+                    <div>
+                        <label for="status">Статус *</label>
+                        <select id="status" name="status" required>
+                            <option value="">Выберите статус</option>
+                            <option value="active">Обучается</option>
+                            <option value="inactive">Выпускник/Отчислен/В академе</option>
+                        </select>
+                        <small class="field-error" id="status-error"></small>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Действия</legend>
+                    <button type="submit">Сохранить студента</button>
+                    <button type="reset">Очистить форму</button>
+                    <a href="/pages/students.html">Отмена</a>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p><a href="/pages/students.html">К списку студентов</a></p>
+    </footer>
+
+    <script type="module" src="/scripts/pages/student-form.js"></script>
+</body>
+</html>

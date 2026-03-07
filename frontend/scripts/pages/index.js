@@ -4,12 +4,12 @@ function countActiveThirdCoursePlus(students) {
     return students.filter(s => s.status === 'active' && s.course >= 3).length;
 }
 
-function countEnrolledLastMonth(students) {
+function countEnrolledLastYear(students) {
     const now = new Date();
-    const oneMonthAgo = new Date(now.getFullYear(), now.getMonth() - 1, now.getDate());
+    const oneYearAgo = new Date(now.getFullYear() - 1, now.getMonth(), now.getDate());
     return students.filter(s => {
         const enrolled = new Date(s.enrolledAt);
-        return enrolled >= oneMonthAgo;
+        return enrolled >= oneYearAgo;
     }).length;
 }
 
@@ -23,7 +23,7 @@ function init() {
 
     if (totalEl) totalEl.textContent = String(students.length);
     if (activeEl) activeEl.textContent = String(countActiveThirdCoursePlus(students));
-    if (periodEl) periodEl.textContent = String(countEnrolledLastMonth(students));
+    if (periodEl) periodEl.textContent = String(countEnrolledLastYear(students));
 }
 
 document.addEventListener('DOMContentLoaded', init);
