@@ -60,25 +60,13 @@
                         <th scope="col">ID</th>
                         <th scope="col">ФИО</th>
                         <th scope="col">Группа</th>
-                        <th scope="col">Номер зачетки</th>
+			<th scope="col">Курс</th>
+                        <th scope="col">Дата зачисления</th>
                         <th scope="col">Действия</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>101</td>
-                        <td>Иванов И.И.</td>
-                        <td>ИС-21</td>
-                        <td>З-123</td>
-                        <td><a href="/pages/student-report.html?id=101">Отчет</a></td>
-                    </tr>
-                    <tr>
-                        <td>102</td>
-                        <td>Петров П.П.</td>
-                        <td>ИС-21</td>
-                        <td>З-124</td>
-                        <td><a href="/pages/student-report.html?id=102">Отчет</a></td>
-                    </tr>
+                <tbody id="items-tbody">
+                   
                 </tbody>
             </table>
         </section>
@@ -87,5 +75,7 @@
     <footer>
         <p><a href="/index.html">На главную</a></p>
     </footer>
+    <script type="module" src="/scripts/pages/students.js"></script>
 </body>
 </html>
+

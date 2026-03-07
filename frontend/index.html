@@ -27,23 +27,18 @@
         <!-- Блок ключевых показателей -->
         <section aria-labelledby="summary-title">
             <h2 id="summary-title">Ключевые показатели</h2>
-            <p>Здесь будут отображаться метрики, загруженные из базы данных (API).</p>
             <div class="summary-cards">
                 <article>
-                    <h3>Всего групп</h3>
-                    <p><strong>--</strong></p>
-                </article>
-                <article>
                     <h3>Всего студентов</h3>
-                    <p><strong>--</strong></p>
+                    <p><strong id="metric-total">-</strong></p>
                 </article>
                 <article>
-                    <h3>Проведено занятий</h3>
-                    <p><strong>--</strong></p>
+                    <h3>Активных (3+ курс)</h3>
+                    <p><strong id="metric-active">-</strong></p>
                 </article>
                 <article>
-                    <h3>Сред. активность</h3>
-                    <p><strong>--</strong></p>
+                    <h3>Новых за месяц</h3>
+                    <p><strong id="metric-period">-</strong></p>
                 </article>
             </div>
         </section>
@@ -82,5 +77,6 @@
     <footer>
         <p>Дисциплина: «Разработка интернет-приложений» | Тема: Журнал посещаемости</p>
     </footer>
+    <script type="module" src="/scripts/pages/index.js"></script>
 </body>
 </html>
