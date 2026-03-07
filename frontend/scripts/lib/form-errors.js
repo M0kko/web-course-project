@@ -14,7 +14,7 @@ export function clearFormErrors(form) {
     form.querySelectorAll('is-invalid').forEach(el => {
         el.classList.remove('is-invalid');
     });
-    const messageEl = document.getElementById('form-message');
+    const messageEl = document.getElementById('app-message');
     if (messageEl) {
         messageEl.textContent = '';
     }
@@ -33,15 +33,15 @@ export function showFormErrors(form, errors) {
             inputEl.classList.add('is-invalid');
         }
     }
-    const messageEl = document.getElementById('form-message');
+    const messageEl = document.querySelector('#app-message');
     if (messageEl) {
         messageEl.textContent = 'Форма содержит ошибки. Исправьте выделенные поля.';
     }
 }
 
 export function showFormSuccess(message) {
-    const messageEl = document.getElementById('form-message');
+    const messageEl = document.querySelector('#app-message');
     if (messageEl) {
         messageEl.textContent = message;
-    }
+    }   
 }

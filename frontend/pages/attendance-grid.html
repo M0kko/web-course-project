@@ -24,10 +24,10 @@
     </header>
 
     <main id="main">
-        <!-- Выбор контекста: группа и дата -->
         <section aria-labelledby="context-title">
             <h2 id="context-title">Контекст просмотра</h2>
-            <form action="#" method="get">
+            <form id="attendance-context-form" action="#" method="get">
+                <div id="form-message" aria-live="polite"></div>
                 <div>
                     <label for="group-select">Группа:</label>
                     <select id="group-select" name="group">
@@ -61,41 +61,8 @@
                             <th scope="col">Комментарий</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Иванов И.И.</td>
-                            <td>
-                                <select name="status[101]">
-                                    <option value="present">Присутствовал</option>
-                                    <option value="absent">Отсутствовал</option>
-                                    <option value="excused">Уваж. причина</option>
-                                </select>
-                            </td>
-                            <td>
-                                <input type="number" name="grade[101]" min="0" max="5" step="1" value="0" />
-                            </td>
-                            <td>
-                                <input type="text" name="comment[101]" placeholder="..." maxlength="100" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Петров П.П.</td>
-                            <td>
-                                <select name="status[102]">
-                                    <option value="present">Присутствовал</option>
-                                    <option value="absent">Отсутствовал</option>
-                                    <option value="excused">Уваж. причина</option>
-                                </select>
-                            </td>
-                            <td>
-                                <input type="number" name="grade[102]" min="0" max="5" step="1" value="0" />
-                            </td>
-                            <td>
-                                <input type="text" name="comment[102]" placeholder="..." maxlength="100" />
-                            </td>
-                        </tr>
+                    <tbody id="attendance-tbody">
+                        
                     </tbody>
                 </table>
                 <div>
@@ -108,5 +75,6 @@
     <footer>
         <p><a href="/index.html">На главную</a></p>
     </footer>
+    <script type="module" src="/scripts/pages/attendance-grid.js"></script>
 </body>
 </html>

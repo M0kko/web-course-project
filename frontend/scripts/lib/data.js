@@ -76,3 +76,80 @@ export function createStudent(studentData) {
     saveItems(students);
     return newStudent;
 }
+
+const GROUPS_STORAGE_KEY = 'attendance_groups_v1';
+
+export function getGroups() {
+    const raw = localStorage.getItem(GROUPS_STORAGE_KEY);
+    if (!raw) return [];
+    try {
+        const parsed = JSON.parse(raw);
+        return Array.isArray(parsed) ? parsed : [];
+    } catch {
+        return [];
+    }
+}
+
+export function saveGroups(groups) {
+    localStorage.setItem(GROUPS_STORAGE_KEY, JSON.stringify(groups));
+}
+
+export function ensureGroups() {
+    const existing = getGroups();
+    if (existing.length > 0) return existing;
+    const defaultGroups = [
+        { id: 1, name: 'ИС-21', course: 3 },
+        { id: 2, name: 'БО-31', course: 4 },
+        { id: 3, name: 'ИБ-11', course: 1 }
+    ];
+    saveGroups(defaultGroups);
+    return defaultGroups;
+}
+
+const LESSONS_STORAGE_KEY = 'attendance_lessons_v1';
+
+export function getLessons() {
+    const raw = localStorage.getItem(LESSONS_STORAGE_KEY);
+    if (!raw) return [];
+    try {
+        const parsed = JSON.parse(raw);
+        return Array.isArray(parsed) ? parsed : [];
+    } catch {
+        return [];
+    }
+}
+
+export function saveLessons(lessons) {
+    localStorage.setItem(LESSONS_STORAGE_KEY, JSON.stringify(lessons));
+}
+
+export function ensureLessons() {
+    const existing = getLessons();
+    if (existing.length > 0) return existing;
+    const defaultLessons = [
+        { id: 1, date: '2024-02-15', topic: 'Основы алгоритмизации', groupId: 1, type: 'lecture' },
+        { id: 2, date: '2024-02-22', topic: 'Структуры данных', groupId: 1, type: 'practice' }
+    ];
+    saveLessons(defaultLessons);
+    return defaultLessons;
+}
+
+export function createLesson(lessonData) {
+    const lessons = getLessons();
+    const nextId = lessons.length > 0 ? Math.max(...lessons.map(l => l.id)) + 1 : 1;
+    const newLesson = {
+        id: nextId,
+        date: lessonData.date,
+        topic: lessonData.topic,
+        groupId: Number(lessonData.groupId),
+        type: lessonData.type
+    };
+    lessons.push(newLesson);
+    saveLessons(lessons);
+    return newLesson;
+}
+
+export function getLessonById(id) {
+    const lessons = getLessons();
+    return lessons.find(l => l.id === id) || null;
+}

@@ -26,16 +26,19 @@
     <main id="main">
         <section aria-labelledby="form-title">
             <h2 id="form-title">Параметры занятия</h2>
-            <form action="#" method="post">
+            <form id="lesson-form" action="#" method="post" novalidate>
+                <div id="form-message" aria-live="polite"></div>
                 <fieldset>
                     <legend>Основные поля</legend>
                     <div>
                         <label for="date">Дата проведения</label>
                         <input id="date" name="date" type="date" required />
+                        <small class="field-error" id="date-error"></small>
                     </div>
                     <div>
                         <label for="topic">Тема занятия</label>
                         <input id="topic" name="topic" type="text" maxlength="200" required />
+                        <small class="field-error" id="topic-error"></small>
                     </div>
                     <div>
                         <label for="group">Группа</label>
@@ -45,6 +48,7 @@
                             <option value="2">БО-31</option>
                             <option value="3">ИБ-11</option>
                         </select>
+                        <small class="field-error" id="groupId-error"></small>
                     </div>
                     <div>
                         <label for="type">Тип занятия</label>
@@ -53,6 +57,7 @@
                             <option value="practice">Практика</option>
                             <option value="lab">Лабораторная</option>
                         </select>
+                        <small class="field-error" id="type-error"></small>
                     </div>
                 </fieldset>
                 <fieldset>
@@ -68,5 +73,6 @@
     <footer>
         <p><a href="/pages/lessons.html">К списку занятий</a></p>
     </footer>
+    <script type="module" src="/scripts/pages/lesson-form.js"></script>
 </body>
 </html>

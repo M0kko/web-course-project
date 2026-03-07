@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Журнал посещаемости</title>
+    <link rel="stylesheet" href="/styles/main.css" />
+</head>
+<body>
+    <a href="#app-main" class="skip-link">Перейти к основному содержимому</a>
+    <header>
+        <div>
+            <h1>Журнал посещаемости</h1>
+            <nav aria-label="Основная навигация">
+                <ul class="route-nav">
+                    <li><a href="#/dashboard" data-route-link>Главная</a></li>
+                    <li><a href="#/groups" data-route-link>Группы</a></li>
+                    <li><a href="#/students" data-route-link>Студенты</a></li>
+                    <li><a href="#/lessons" data-route-link>Занятия</a></li>
+                    <li><a href="#/attendance" data-route-link>Журнал</a></li>
+                    <li><a href="#/login" data-route-link>Вход</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main id="app-main">
+        <div id="app-message" aria-live="polite"></div>
+        <section id="app-view" aria-label="Область отображения экранов"></section>
+    </main>
+    <footer>
+        <div>
+            <p>Дисциплина: «Разработка интернет-приложений» | Тема: Журнал посещаемости</p>
+        </div>
+    </footer>
+    <script type="module" src="/scripts/app.js"></script>
+</body>
+</html>

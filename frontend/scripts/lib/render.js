@@ -2,10 +2,6 @@ function statusLabel(status) {
     return status === 'active' ? 'Обучается' : 'Выпускник';
 }
 
-/**
- * Создаёт строку таблицы для студента.
- * Ожидается, что у объекта есть: id, fullName, groupName, course, enrolledAt, status.
- */
 export function createStudentRow(student) {
     const tr = document.createElement('tr');
     tr.dataset.id = String(student.id);
@@ -27,7 +23,7 @@ export function createStudentRow(student) {
 
     const tdActions = document.createElement('td');
     const link = document.createElement('a');
-    link.href = `/pages/student-report.html?id=${encodeURIComponent(student.id)}`;
+    link.href = `#/students/${encodeURIComponent(student.id)}`;
     link.textContent = 'Отчёт';
     link.dataset.action = 'open';
     tdActions.appendChild(link);

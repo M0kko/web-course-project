@@ -26,7 +26,7 @@
     <main id="main">
         <section aria-labelledby="lessons-list-title">
             <h2 id="lessons-list-title">Расписание и темы занятий</h2>
-            <p><a href="/pages/lessons-form.html">+ Создать новое занятие</a></p>
+            <p><a href="/pages/lesson-form.html">+ Создать новое занятие</a></p>
             <table>
                 <caption>Список проведенных и запланированных занятий</caption>
                 <thead>
@@ -39,23 +39,8 @@
                         <th scope="col">Действия</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>2024-02-15</td>
-                        <td>Основы алгоритмизации</td>
-                        <td>ИС-21</td>
-                        <td>Лекция</td>
-                        <td><a href="/pages/attendance-grid.html?lesson=1">Проставить посещаемость</a></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>2024-02-22</td>
-                        <td>Структуры данных</td>
-                        <td>ИС-21</td>
-                        <td>Практика</td>
-                        <td><a href="/pages/attendance-grid.html?lesson=2">Проставить посещаемость</a></td>
-                    </tr>
+                <tbody id="lessons-tbody">
+                    
                 </tbody>
             </table>
         </section>
@@ -64,5 +49,6 @@
     <footer>
         <p><a href="/index.html">На главную</a></p>
     </footer>
+    <script type="module" src="/scripts/pages/lessons.js"></script>
 </body>
 </html>
